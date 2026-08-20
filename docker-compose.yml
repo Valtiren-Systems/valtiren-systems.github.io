@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: valtiren
+      POSTGRES_PASSWORD: valtiren
+      POSTGRES_DB: valtiren
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U valtiren -d valtiren"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://valtiren:valtiren@db:5432/valtiren?schema=public
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    ports:
+      - "3000:3000"
+    # Apply pending migrations before the server accepts traffic.
+    command: sh -c "npx prisma migrate deploy && node server.js"
+
+volumes:
+  pgdata:
