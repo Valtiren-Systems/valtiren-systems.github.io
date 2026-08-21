@@ -13,10 +13,7 @@ export default function Footer() {
         <div className="grid gap-[48px] lg:grid-cols-[352.8px_repeat(3,252px)] lg:gap-[72px]">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="grid h-7 w-7 place-items-center rounded-md bg-violet text-[13px] font-black text-white">
-                V
-              </span>
-              <span className="text-[17px] font-extrabold tracking-[-0.01em]">Valtiren</span>
+              <img src="/images/logo.png" alt="Valtiren Systems" width={459} height={139} className="h-8 w-auto" />
             </div>
             <p className="mt-5 max-w-[320px] text-[13px] leading-[21px] text-paper/50">
               The Intelligent Engagement Suite — sight, sound, scent, data, and

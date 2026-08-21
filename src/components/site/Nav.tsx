@@ -27,10 +27,7 @@ export default function Nav() {
     >
       <div className="flex h-full items-center justify-between px-6 md:px-[57.6px]">
         <a href="#top" className="flex items-center gap-2.5" aria-label="Valtiren Systems home">
-          <span className="grid h-7 w-7 place-items-center rounded-md bg-violet text-[13px] font-black text-white">
-            V
-          </span>
-          <span className="text-[17px] font-extrabold tracking-[-0.01em]">Valtiren</span>
+          <img src="/images/logo.png" alt="Valtiren Systems" width={459} height={139} className="h-8 w-auto" />
         </a>
 
         <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">

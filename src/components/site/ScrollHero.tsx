@@ -158,11 +158,19 @@ function ScreenContent() {
     // container-type lets the slide type scale to the display's own box (cqw),
     // not the viewport — so it reads correctly at both ends of the zoom.
     <div className="relative h-full w-full bg-[#0a0620]" style={{ containerType: "inline-size" }}>
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/videos/hero.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(90% 80% at 20% 15%, rgba(103,30,255,0.75) 0%, rgba(75,28,135,0.35) 45%, rgba(6,6,14,1) 100%)",
+            "radial-gradient(90% 80% at 20% 15%, rgba(103,30,255,0.45) 0%, rgba(75,28,135,0.2) 45%, rgba(6,6,14,0.6) 100%)",
         }}
       />
       {HERO.slides.map((slide, i) => (
