@@ -16,8 +16,9 @@ export default function Footer() {
               <img src="/images/logo.png" alt="Valtiren Systems" width={459} height={139} className="h-8 w-auto" />
             </div>
             <p className="mt-5 max-w-[320px] text-[13px] leading-[21px] text-paper/50">
-              The Intelligent Engagement Suite — sight, sound, scent, data, and
-              services, unified under one platform and one partner.
+            Valtiren Systems brings live operational data and location data together in one simple layer. 
+            Track asset issues, manage inventory across job sites, fix billing errors, 
+            and stay on top of regulatory deadlines without replacing your existing hardware or core systems.
             </p>
           </div>
 

@@ -24,122 +24,75 @@ export type Solution = {
 
 export const NAV_LINKS = [
   { label: "Solutions", href: "#solutions" },
+  // { label: "Industries", href: "#industries" },
   { label: "Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
   { label: "Resources", href: "#resources" },
   { label: "Company", href: "#company" },
 ] as const;
 
 export const HERO = {
   eyebrow: "Meet the",
-  title: "Intelligent Engagement Suite",
-  subtitle: "Engaging in Every Sense",
-  slides: [
-    { kicker: "Amplify", line: "every moment of the customer journey." },
-    { kicker: "Analyze", line: "what actually moves the needle." },
-    { kicker: "Engage", line: "across sight, sound, and scent." },
-  ],
+  title: "Valtiren Systems",
+  subtitle: "Stop Unbilled Losses, Field Bottlenecks & Compliance Surprises in 30 Days.",
+  slides: [],
 } as const;
 
 export const SUITE = {
-  title: "The Intelligent Engagement Suite",
-  body: "A comprehensive ecosystem of sight, sound, scent, data solutions, and service offerings that work together to drive engagement across every touchpoint — unified under one platform, one partner, and one strategy.",
+  title: "The Zero-Disruption Overlay",
+  body: "Traditional software projects often take too much time and money. They can require years to roll out, large upfront investments, and even replacing existing hardware.",
 } as const;
 
 export const SOLUTIONS: Solution[] = [
   {
     icon: "signage",
-    title: "Digital Signage",
-    body: "Dynamic on-premise screens that turn dwell time into brand time, managed centrally across every location.",
+    title: "Tool & Equipment Location Visibility",
+    body: "Crews hoard specialized tools in trailers across job sites \"just in case.\" Meanwhile, another PM on a nearby site rents the exact same equipment, doubling your rental overhead while owned assets gather dust.",
     href: "#digital-signage",
   },
   {
     icon: "menu",
-    title: "Digital Menu Boards",
-    body: "Day-parted, price-synced menus that update themselves the moment your POS does.",
+    title: "Material & Laydown Yard Management",
+    body: "Materials are delivered to large laydown yards or multi-story builds, but nobody can find them when it's time to install. PMs end up emergency-ordering duplicate stock to keep trades moving, blowing up job budgets.",
     href: "#digital-menu-boards",
   },
   {
     icon: "kiosk",
-    title: "Interactive Kiosks",
-    body: "Self-service ordering, wayfinding, and check-in that shortens lines and lifts average ticket.",
+    title: "Sub-Contractor & Chain-of-Custody Accountability",
+    body: "When tools go missing or equipment breaks, nobody takes responsibility. Without clear transfer logs between trades and sites, tool replacement costs come straight out of the general contractor's pocket.",
     href: "#interactive-kiosks",
-  },
-  {
-    icon: "music",
-    title: "Overhead Music",
-    body: "Fully licensed, brand-matched playlists that set the tempo of the room without the legal risk.",
-    href: "#overhead-music",
-  },
-  {
-    icon: "hold",
-    title: "On-Hold Marketing",
-    body: "Turn hold time into airtime with professionally produced messaging on every inbound call.",
-    href: "#on-hold-marketing",
-  },
-  {
-    icon: "scent",
-    title: "Scent Marketing",
-    body: "Signature scent profiles that anchor memory to your brand long after the visit ends.",
-    href: "#scent-marketing",
-  },
-  {
-    icon: "driveThru",
-    title: "Drive-Thru Systems",
-    body: "Clear audio, timed prompts, and lane analytics engineered for speed of service.",
-    href: "#drive-thru",
-  },
-  {
-    icon: "wifi",
-    title: "WiFi Marketing",
-    body: "Guest WiFi that captures opt-ins, builds audiences, and measures repeat visitation.",
-    href: "#wifi-marketing",
-  },
-  {
-    icon: "analytics",
-    title: "Data & Analytics",
-    body: "One dashboard tying screen, sound, and scent activity to real in-store outcomes.",
-    href: "#analytics",
   },
 ];
 
 export const SERVICES = {
-  heading: "Services that carry the whole program",
-  body: "Hardware is the easy part. Our teams handle strategy, creative production, installation, network provisioning, and ongoing support so your locations stay live — and your internal team stays focused on the business.",
+  heading: "From Site Chaos to Live Map Control in 3 Steps",
+  body: "",
   items: [
     {
-      title: "Creative Studio",
-      body: "In-house motion, audio, and copy production tuned per location and per day-part.",
+      title: "Connect Field Data Feeds",
+      body: "We ingest data from your current tool tags, rental portals, barcode scanners, or ERP databases. No hardware rip-and-replace required.",
     },
     {
-      title: "Nationwide Installation",
-      body: "Vetted field technicians, site surveys, and staged rollouts across every market you operate in.",
+      title: "Auto-Detect Field Exceptions",
+      body: "Our AI layer monitors asset movements to flag idle tools, missing material deliveries, and unaccounted equipment movements.",
     },
     {
-      title: "Managed Networking",
-      body: "Provisioned connectivity, device monitoring, and remote remediation before you notice a fault.",
-    },
-    {
-      title: "Support & Success",
-      body: "A named team, defined SLAs, and quarterly business reviews against your own KPIs.",
+      title: "Manage Across Interactive Site Maps",
+      body: "Project managers and superintendents view live asset positions across job sites, redeploying gear and finding materials instantly.",
     },
   ],
 } as const;
 
 export const LOGOS = [
-  "Northbrook",
-  "Cascade Health",
-  "Vantage Auto",
-  "Harborline",
-  "Meridian Bank",
-  "Trailhead Co.",
-  "Solace Hotels",
-  "Kestrel Foods",
+  "Water utilities",
+  "Solar operators",
+  "battery operators",
+  "Electric cooperatives",
+  "Construction Industry",
 ] as const;
 
 export const CTA = {
-  title: "Ready to engage every sense?",
-  body: "Talk to a strategist about what the suite looks like across your footprint.",
+  title: "Stop Paying for Tools You Already Own",
+  body: "Tell us about your toughest job site inventory headache. Our engineering team will review your current tool/material workflow and demonstrate how to solve it before proposing a platform.",
   primary: { label: "Book a Demo", href: "#demo" },
   secondary: { label: "Talk to Sales", href: "#contact" },
 } as const;
@@ -148,11 +101,11 @@ export const FOOTER_COLUMNS = [
   {
     heading: "Solutions",
     links: [
-      "Digital Signage",
-      "Digital Menu Boards",
-      "Interactive Kiosks",
-      "Overhead Music",
-      "Scent Marketing",
+      "Revenue Leak Engine",
+      "LSL Compliance Intelligence",
+      "Solar Fault Detector",
+      "Site Inventory Tracker",
+      "Vegetation Risk Overlay",
     ],
   },
   {
