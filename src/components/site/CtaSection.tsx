@@ -28,7 +28,9 @@ export default function CtaSection() {
       const body = await res.json();
       if (!res.ok) throw new Error(body?.error ?? "Something went wrong.");
       setStatus("ok");
-      setMessage("Thanks — a strategist will reach out within one business day.");
+      setMessage(
+        "Thanks — a strategist will reach out within one business day."
+      );
       form.reset();
     } catch (err) {
       setStatus("error");
@@ -69,13 +71,39 @@ export default function CtaSection() {
               className="rounded-[16px] border border-hairline bg-white/[0.04] p-7"
             >
               <div className="grid gap-4 sm:grid-cols-2">
-                <Field name="firstName" label="First name" autoComplete="given-name" required />
-                <Field name="lastName" label="Last name" autoComplete="family-name" required />
+                <Field
+                  name="firstName"
+                  label="First name"
+                  autoComplete="given-name"
+                  required
+                />
+                <Field
+                  name="lastName"
+                  label="Last name"
+                  autoComplete="family-name"
+                  required
+                />
               </div>
               <div className="mt-4 grid gap-4">
-                <Field name="email" label="Work email" type="email" autoComplete="email" required />
-                <Field name="company" label="Company" autoComplete="organization" required />
-                <Field name="locations" label="Number of locations" type="number" min={1} />
+                <Field
+                  name="email"
+                  label="Work email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                />
+                <Field
+                  name="company"
+                  label="Company"
+                  autoComplete="organization"
+                  required
+                />
+                <Field
+                  name="locations"
+                  label="Number of locations"
+                  type="number"
+                  min={1}
+                />
               </div>
 
               <label className="mt-4 block">
@@ -130,10 +158,15 @@ function Field({
   name,
   label,
   ...rest
-}: { name: string; label: string } & React.InputHTMLAttributes<HTMLInputElement>) {
+}: {
+  name: string;
+  label: string;
+} & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-[12px] font-semibold text-paper/70">{label}</span>
+      <span className="mb-1.5 block text-[12px] font-semibold text-paper/70">
+        {label}
+      </span>
       <input
         name={name}
         className="w-full rounded-[10px] border border-hairline bg-black/30 px-3.5 py-2.5 text-[14px] outline-none transition-colors focus:border-violet"

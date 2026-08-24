@@ -26,8 +26,18 @@ export default function Nav() {
       style={{ background: "rgba(5,6,10,0.92)", backdropFilter: "blur(14px)" }}
     >
       <div className="flex h-full items-center justify-between px-6 md:px-[57.6px]">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="Valtiren Systems home">
-          <img src="/images/logo.png" alt="Valtiren Systems" width={459} height={139} className="h-8 w-auto" />
+        <a
+          href="#top"
+          className="flex items-center gap-2.5"
+          aria-label="Valtiren Systems home"
+        >
+          <img
+            src="/images/logo.png"
+            alt="Valtiren Systems"
+            width={459}
+            height={139}
+            className="h-8 w-auto"
+          />
         </a>
 
         <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
@@ -43,7 +53,10 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="#contact" className="hidden text-[14px] font-medium text-paper/80 hover:text-lime md:block">
+          <a
+            href="#contact"
+            className="hidden text-[14px] font-medium text-paper/80 hover:text-lime md:block"
+          >
             Support
           </a>
           <a href="#demo" className="btn-primary !py-[10px] !text-[13.5px]">

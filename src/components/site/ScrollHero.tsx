@@ -55,7 +55,11 @@ export default function ScrollHero() {
 
   return (
     <section ref={trackRef} id="top" className="relative h-[250vh] bg-black">
-      <div ref={stageRef} className="sticky top-0 h-screen overflow-hidden" style={{ ["--p" as string]: 0 }}>
+      <div
+        ref={stageRef}
+        className="sticky top-0 h-screen overflow-hidden"
+        style={{ ["--p" as string]: 0 }}
+      >
         {/* ---- Room plate: swap for /public/hero-room.jpg ---- */}
         <div
           className="absolute inset-0 origin-center"
@@ -132,20 +136,25 @@ function RoomPlate() {
       <div
         className="absolute inset-x-0 bottom-0 h-[38%]"
         style={{
-          background: "linear-gradient(180deg, rgba(12,10,24,0) 0%, #0b0916 40%, #050409 100%)",
+          background:
+            "linear-gradient(180deg, rgba(12,10,24,0) 0%, #0b0916 40%, #050409 100%)",
         }}
       />
       {/* wall wash from the display */}
       <div
         className="absolute left-1/2 top-[18%] h-[64%] w-[62%] -translate-x-1/2 blur-3xl"
-        style={{ background: "radial-gradient(closest-side, rgba(103,30,255,0.45), transparent)" }}
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(103,30,255,0.45), transparent)",
+        }}
       />
       {/* display bezel */}
       <div
         className="absolute left-[26.4%] top-[18.6%] h-[63.4%] w-[47.2%] rounded-[10px]"
         style={{
           background: "linear-gradient(160deg,#1b1b22,#0a0a0f)",
-          boxShadow: "0 40px 90px -30px rgba(0,0,0,0.9), inset 0 0 0 1px rgba(255,255,255,0.06)",
+          boxShadow:
+            "0 40px 90px -30px rgba(0,0,0,0.9), inset 0 0 0 1px rgba(255,255,255,0.06)",
         }}
       />
     </div>
@@ -157,7 +166,10 @@ function ScreenContent() {
   return (
     // container-type lets the slide type scale to the display's own box (cqw),
     // not the viewport — so it reads correctly at both ends of the zoom.
-    <div className="relative h-full w-full bg-[#0a0620]" style={{ containerType: "inline-size" }}>
+    <div
+      className="relative h-full w-full bg-[#0a0620]"
+      style={{ containerType: "inline-size" }}
+    >
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src="/videos/hero.mp4"
@@ -173,26 +185,6 @@ function ScreenContent() {
             "radial-gradient(90% 80% at 20% 15%, rgba(103,30,255,0.45) 0%, rgba(75,28,135,0.2) 45%, rgba(6,6,14,0.6) 100%)",
         }}
       />
-      {HERO.slides.map((slide, i) => (
-        <div
-          key={slide.kicker}
-          className="absolute inset-0 grid place-items-center px-[6%] text-center"
-          style={{
-            animation: `slideCycle 12s ${i * 4}s infinite`,
-            opacity: 0,
-          }}
-        >
-          <div>
-            <p className="text-[clamp(1.8rem,7cqw,5rem)] font-black leading-none tracking-[-0.02em] text-lime">
-              {slide.kicker}
-            </p>
-            <p className="mt-3 text-[clamp(0.8rem,2.4cqw,1.6rem)] font-medium text-paper/85">
-              {slide.line}
-            </p>
-          </div>
-        </div>
-      ))}
-      {/* screen sheen */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{

@@ -7,7 +7,10 @@ import Reveal from "./Reveal";
  */
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-white py-[clamp(64px,8vw,115.2px)] text-midnight">
+    <section
+      id="services"
+      className="bg-white py-[clamp(64px,8vw,115.2px)] text-midnight"
+    >
       <div className="shell px-6 md:px-[57.6px]">
         <div className="grid gap-[72px] lg:grid-cols-[526px_minmax(0,726px)]">
           <Reveal>
@@ -27,7 +30,9 @@ export default function ServicesSection() {
               {SERVICES.items.map((item, i) => (
                 <Reveal key={item.title} delay={((i % 2) + 1) as 1 | 2}>
                   <div className="border-t border-midnight/12 pt-5">
-                    <h3 className="text-[17px] font-bold tracking-[-0.01em]">{item.title}</h3>
+                    <h3 className="text-[17px] font-bold tracking-[-0.01em]">
+                      {item.title}
+                    </h3>
                     <p className="mt-2 text-[13.5px] leading-[22px] text-midnight/60">
                       {item.body}
                     </p>

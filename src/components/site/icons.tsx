@@ -45,13 +45,19 @@ const PATHS: Record<IconName, React.ReactNode> = {
   ),
   scent: (
     <>
-      <path d="M8 21h8a2 2 0 0 0 2-2v-6a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4v6a2 2 0 0 0 2 2Z" {...s} />
+      <path
+        d="M8 21h8a2 2 0 0 0 2-2v-6a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4v6a2 2 0 0 0 2 2Z"
+        {...s}
+      />
       <path d="M10 5h4M12 5V3M9 14c1.5-1.5 4.5-1.5 6 0" {...s} />
     </>
   ),
   driveThru: (
     <>
-      <path d="M3 16h18M5 16l1.6-5.2A2 2 0 0 1 8.5 9.4h7a2 2 0 0 1 1.9 1.4L19 16" {...s} />
+      <path
+        d="M3 16h18M5 16l1.6-5.2A2 2 0 0 1 8.5 9.4h7a2 2 0 0 1 1.9 1.4L19 16"
+        {...s}
+      />
       <circle cx="7.5" cy="18.5" r="1.6" {...s} />
       <circle cx="16.5" cy="18.5" r="1.6" {...s} />
       <path d="M12 3v3" {...s} />
@@ -59,7 +65,10 @@ const PATHS: Record<IconName, React.ReactNode> = {
   ),
   wifi: (
     <>
-      <path d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.5 16a6 6 0 0 1 7 0" {...s} />
+      <path
+        d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.5 16a6 6 0 0 1 7 0"
+        {...s}
+      />
       <circle cx="12" cy="19.5" r="1.2" fill="currentColor" />
     </>
   ),

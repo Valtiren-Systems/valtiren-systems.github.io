@@ -21,14 +21,20 @@ export async function POST(request: Request) {
   try {
     json = await request.json();
   } catch {
-    return NextResponse.json({ error: "Malformed request body." }, { status: 400 });
+    return NextResponse.json(
+      { error: "Malformed request body." },
+      { status: 400 }
+    );
   }
 
   const parsed = LeadSchema.safeParse(json);
   if (!parsed.success) {
     const first = parsed.error.issues[0];
     return NextResponse.json(
-      { error: first?.message ?? "Invalid submission.", issues: parsed.error.flatten() },
+      {
+        error: first?.message ?? "Invalid submission.",
+        issues: parsed.error.flatten(),
+      },
       { status: 422 }
     );
   }

@@ -8,7 +8,7 @@ import { LOGOS } from "@/lib/content";
 export default function LogoMarquee() {
   const sets = [0, 1];
   return (
-    <section 
+    <section
       aria-label="Trusted by"
       className="marquee overflow-hidden border-y border-hairline bg-ink-raised py-[38.4px]"
       style={{
@@ -20,7 +20,11 @@ export default function LogoMarquee() {
     >
       <div className="marquee-track">
         {sets.map((set) => (
-          <div key={set} className="flex shrink-0 items-center gap-[56px] pr-[56px]" aria-hidden={set === 1}>
+          <div
+            key={set}
+            className="flex shrink-0 items-center gap-[56px] pr-[56px]"
+            aria-hidden={set === 1}
+          >
             {LOGOS.map((name) => (
               <span
                 key={name}

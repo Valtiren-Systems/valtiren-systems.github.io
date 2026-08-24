@@ -39,7 +39,9 @@ export default function Reveal({
   return (
     <Tag
       ref={ref}
-      className={`reveal ${delay ? `reveal-delay-${delay}` : ""} ${shown ? "in" : ""} ${className}`}
+      className={`reveal ${delay ? `reveal-delay-${delay}` : ""} ${
+        shown ? "in" : ""
+      } ${className}`}
     >
       {children}
     </Tag>
