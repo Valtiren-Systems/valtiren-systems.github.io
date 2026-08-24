@@ -2,11 +2,6 @@
 
 Company site built on **Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · PostgreSQL (Prisma) · Docker**.
 
-The landing page UI is a structural replication of the reference layout: a
-250vh scroll-driven hero, the suite/solutions grid, a logo marquee, an
-asymmetric services block, a CTA with a database-backed demo form, and a
-four-column footer.
-
 ---
 
 ## Quick start (local)
@@ -76,28 +71,6 @@ interpolates off that variable, so animation stays on the compositor and React
 never re-renders per frame. `prefers-reduced-motion` pins `--p` to 1.
 
 ---
-
-## Replacing the placeholder art
-
-`RoomPlate` and `ScreenContent` in
-[ScrollHero.tsx](src/components/site/ScrollHero.tsx) are CSS/SVG stand-ins that
-establish the composition and the display's rect. Drop real assets in `public/`
-and swap `RoomPlate` for an `<Image>`; keep the display's percentage box
-(`left 26.4% / top 18.6% / 47.2% × 63.4%`) aligned with wherever the screen
-falls in your photograph, and the seated-screen coordinates in the zoom layer
-will line up.
-
----
-
-## Notes
-
-- **Hosting.** This repo is named `*.github.io`, but GitHub Pages serves static
-  files only — it cannot run the API routes or reach Postgres. Deploy the
-  container to a host that runs Node (Vercel, Fly.io, Railway, Cloud Run), or
-  strip the dynamic routes and export statically.
-- **Content and brand.** Copy, names, and logos here are original Valtiren
-  placeholders. The reference site's text, imagery, and logotype are its
-  owner's property — replicate layout and interaction patterns, not assets.
 
 ## Scripts
 
