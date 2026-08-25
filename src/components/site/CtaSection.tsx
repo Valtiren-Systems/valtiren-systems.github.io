@@ -14,16 +14,41 @@ export default function CtaSection() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
+  // async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  //   e.preventDefault();
+  //   const form = e.currentTarget;
+  //   const payload = Object.fromEntries(new FormData(form).entries());
+  //   setStatus("sending");
+  //   try {
+  //     const res = await fetch("/api/leads", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(payload),
+  //     });
+  //     const body = await res.json();
+  //     if (!res.ok) throw new Error(body?.error ?? "Something went wrong.");
+  //     setStatus("ok");
+  //     setMessage(
+  //       "Thanks — a strategist will reach out within one business day."
+  //     );
+  //     form.reset();
+  //   } catch (err) {
+  //     setStatus("error");
+  //     setMessage(err instanceof Error ? err.message : "Something went wrong.");
+  //   }
+  // }
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const payload = Object.fromEntries(new FormData(form).entries());
     setStatus("sending");
+    const formData = new FormData(e.target);
+    formData.append("access_key", "5bf78a32-4d73-4f16-99a1-7abea7a81639");
     try {
-      const res = await fetch("/api/leads", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
       });
       const body = await res.json();
       if (!res.ok) throw new Error(body?.error ?? "Something went wrong.");
@@ -72,14 +97,14 @@ export default function CtaSection() {
             >
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field
-                  name="firstName"
-                  label="First name"
+                  name="name"
+                  label="Name"
                   autoComplete="given-name"
                   required
                 />
                 <Field
-                  name="lastName"
-                  label="Last name"
+                  name="country"
+                  label="Country"
                   autoComplete="family-name"
                   required
                 />
@@ -92,17 +117,12 @@ export default function CtaSection() {
                   autoComplete="email"
                   required
                 />
+                <Field name="phonenumber" label="Phone number" />
                 <Field
                   name="company"
                   label="Company"
                   autoComplete="organization"
                   required
-                />
-                <Field
-                  name="locations"
-                  label="Number of locations"
-                  type="number"
-                  min={1}
                 />
               </div>
 
