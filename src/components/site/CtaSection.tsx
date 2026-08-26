@@ -44,7 +44,7 @@ export default function CtaSection() {
     const payload = Object.fromEntries(new FormData(form).entries());
     setStatus("sending");
     const formData = new FormData(e.target);
-    formData.append("access_key", "5bf78a32-4d73-4f16-99a1-7abea7a81639");
+    formData.append("access_key", "efe3a31f-abff-4e51-9199-da3b500369ff");
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
