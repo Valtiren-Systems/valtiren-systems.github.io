@@ -54,8 +54,7 @@ export const NAV_LINKS = [
 export const HERO = {
   eyebrow: "Meet the",
   title: "Valtiren Systems",
-  subtitle:
-    "Stop Unbilled Losses, Field Bottlenecks & Compliance Surprises in 30 Days.",
+  subtitle: "Building the Digital Infrastructure Behind Utilities",
 } as const;
 
 export const SUITE = {
