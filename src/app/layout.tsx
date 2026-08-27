@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // The reference UI ships Poppins for body/buttons and Metropolis for display.
 // Metropolis is not freely licensed; Poppins is the same geometric-grotesk
