@@ -31,13 +31,13 @@ export default function SuiteSection() {
                 className="group flex h-full flex-col rounded-[14px] border border-hairline bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-violet/50 hover:bg-white/[0.06]"
               >
                 <SolutionIcon name={sol.icon} />
-                <h3 className="mt-5 text-[15px] font-bold tracking-[-0.005em]">
+                <h3 className="mt-5 text-[23px] font-bold tracking-[-0.005em]">
                   {sol.title}
                 </h3>
-                <p className="mt-2 text-[11px] font-medium leading-[18px] text-paper/60">
+                <p className="mt-2 text-[14px] font-medium leading-[24px] text-paper/60">
                   {sol.body}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-bold text-lime opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[15px] font-bold text-lime opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   Learn more <ArrowRight className="h-3 w-3" />
                 </span>
               </a>

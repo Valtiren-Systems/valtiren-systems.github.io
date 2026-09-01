@@ -30,10 +30,10 @@ export default function ServicesSection() {
               {SERVICES.items.map((item, i) => (
                 <Reveal key={item.title} delay={((i % 2) + 1) as 1 | 2}>
                   <div className="border-t border-midnight/12 pt-5">
-                    <h3 className="text-[17px] font-bold tracking-[-0.01em]">
+                    <h3 className="text-[22px] font-bold tracking-[-0.01em]">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-[13.5px] leading-[22px] text-midnight/60">
+                    <p className="mt-2 text-[15px] leading-[22px] text-midnight/60">
                       {item.body}
                     </p>
                   </div>
