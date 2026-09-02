@@ -1,4 +1,4 @@
-# Valtiren Systems — v1.0
+# Valtiren Systems — v1.0.1
 
 Company site built on **Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · PostgreSQL (Prisma) · Docker**.
 

@@ -54,7 +54,7 @@ export default function CtaSection() {
       if (!res.ok) throw new Error(body?.error ?? "Something went wrong.");
       setStatus("ok");
       setMessage(
-        "Thanks — a strategist will reach out within one business day."
+        "Thanks — our team will review your request and get back to you within one business day."
       );
       form.reset();
     } catch (err) {
@@ -128,7 +128,7 @@ export default function CtaSection() {
 
               <label className="mt-4 block">
                 <span className="mb-1.5 block text-[12px] font-semibold text-paper/70">
-                  What are you trying to solve?
+                  What are you currently dealing?
                 </span>
                 <textarea
                   name="message"

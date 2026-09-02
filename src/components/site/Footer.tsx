@@ -54,11 +54,11 @@ export default function Footer() {
               />
             </div>
             <p className="mt-5 max-w-[320px] text-[13px] leading-[21px] text-paper/50">
-              Valtiren Systems brings live operational data and location data
-              together in one simple layer. Track asset issues, manage inventory
-              across job sites, fix billing errors, and stay on top of
-              regulatory deadlines without replacing your existing hardware or
-              core systems.
+              Valtiren Systems connects operational data, location data, and
+              field systems into one intelligent layer. See what's happening
+              across your infrastructure, identify problems earlier, and help
+              your team make better decisions — without replacing the systems
+              you already rely on.
             </p>
 
             <div className="social-links">

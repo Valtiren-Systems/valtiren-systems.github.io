@@ -54,50 +54,51 @@ export const NAV_LINKS = [
 export const HERO = {
   eyebrow: "Meet the",
   title: "Valtiren Systems",
-  subtitle: "Building the Digital Infrastructure Behind Utilities",
+  subtitle:
+    "AI-powered systems connecting infrastructure, data, and the field.",
 } as const;
 
 export const SUITE = {
-  title: "The Zero-Disruption Overlay",
-  body: "Traditional software projects often take too much time and money. They can require years to roll out, large upfront investments, and even replacing existing hardware.",
+  title: "Connect What You Already Have.",
+  body: "Your business already has data, devices, maps, databases, and field workflows. We connects them into a unified operational layer, then uses AI to help your team find patterns, detect problems, and make better decisions — without replacing everything you already use.",
 } as const;
 
 export const SOLUTIONS: Solution[] = [
   {
     icon: "signage",
-    title: "Tool & Equipment Location Visibility",
-    body: 'Crews hoard specialized tools in trailers across job sites "just in case." Meanwhile, another PM on a nearby site rents the exact same equipment, doubling your rental overhead while owned assets gather dust.',
+    title: "Know Where Your Infrastructure Is",
+    body: "Your assets are spread across maps, spreadsheets, databases, work orders, and field crews. We bring them together into a single spatial view so your team can understand what exists, where it is, and what needs attention.",
     href: "#digital-signage",
   },
   {
     icon: "menu",
-    title: "Material & Laydown Yard Management",
-    body: "Materials are delivered to large laydown yards or multi-story builds, but nobody can find them when it's time to install. PMs end up emergency-ordering duplicate stock to keep trades moving, blowing up job budgets.",
+    title: "Turn Field Data Into Decisions",
+    body: "Sensors, inspections, GPS devices, meters, and field reports generate valuable data — but collecting data is only the beginning. We connect your field data and uses AI-powered analysis to surface anomalies, prioritize issues, and help your team focus on what matters.",
     href: "#digital-menu-boards",
   },
   {
     icon: "kiosk",
-    title: "Sub-Contractor & Chain-of-Custody Accountability",
-    body: "When tools go missing or equipment breaks, nobody takes responsibility. Without clear transfer logs between trades and sites, tool replacement costs come straight out of the general contractor's pocket.",
+    title: "Build Systems Around Your Operations",
+    body: "Every infrastructure business works differently. Instead of forcing your operation into a generic SaaS workflow, we build focused systems around your processes — from asset management and field operations to monitoring, reporting, and intelligent automation.",
     href: "#interactive-kiosks",
   },
 ];
 
 export const SERVICES = {
-  heading: "From Site Chaos to Live Map Control in 3 Steps",
+  heading: "From Field Data to Intelligent Systems",
   body: "",
   items: [
     {
-      title: "Connect Field Data Feeds",
-      body: "We ingest data from your current tool tags, rental portals, barcode scanners, or ERP databases. No hardware rip-and-replace required.",
+      title: "01 — Connect",
+      body: "We connect your existing GIS, IoT devices, databases, business systems, and field workflows into one operational layer.",
     },
     {
-      title: "Auto-Detect Field Exceptions",
-      body: "Our AI layer monitors asset movements to flag idle tools, missing material deliveries, and unaccounted equipment movements.",
+      title: "02 — Understand",
+      body: "We turn fragmented infrastructure data into maps, dashboards, alerts, analytics, and AI-powered operational intelligence.",
     },
     {
-      title: "Manage Across Interactive Site Maps",
-      body: "Project managers and superintendents view live asset positions across job sites, redeploying gear and finding materials instantly.",
+      title: "03 — Operate",
+      body: "Your team gets software designed around the way your organization actually works — helping people monitor, maintain, and improve physical infrastructure with better information and intelligent automation.",
     },
   ],
 } as const;
@@ -105,16 +106,15 @@ export const SERVICES = {
 export const LOGOS = [
   "Water utilities",
   "Solar operators",
-  "battery operators",
   "Electric cooperatives",
-  "Construction Industry",
+  "Construction & infrastructure",
 ] as const;
 
 export const CTA = {
-  title: "Stop Paying for Tools You Already Own",
-  body: "Tell us about your toughest job site inventory headache. Our engineering team will review your current tool/material workflow and demonstrate how to solve it before proposing a platform.",
-  primary: { label: "Book a Demo", href: "#demo" },
-  secondary: { label: "Talk to Sales", href: "#contact" },
+  title: "Turn Your Infrastructure Data Into an Advantage.",
+  body: "Let's turn it into an intelligent system for your business. Tell us what you're managing, what information is difficult to track, and where your current systems fall short. We'll help identify where GIS, IoT, AI, and custom software can make the biggest operational difference.",
+  primary: { label: "Talk to Our Team", href: "#contact" },
+  secondary: { label: "Explore Our Systems", href: "#explore" },
 } as const;
 
 export const SOCIALLINKS: SocialLink[] = [
