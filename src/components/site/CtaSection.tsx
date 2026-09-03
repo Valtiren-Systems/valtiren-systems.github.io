@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CTA } from "@/lib/content";
 import Reveal from "./Reveal";
+import DemoRequestModal from "./DemoRequestModal";
 
 type Status = "idle" | "sending" | "ok" | "error";
 
@@ -72,101 +73,23 @@ export default function CtaSection() {
               <h2 className="text-[clamp(2.5rem,6.9vw,6.25rem)] font-bold leading-[1.1] tracking-[-0.03em]">
                 {CTA.title}
               </h2>
+            </div>
+          </Reveal>
+          <Reveal delay={1} className="flex flex-col items-start gap-6">
+            <div className="mt-9 flex flex-wrap items-center gap-4">
               <p className="mt-6 max-w-[520px] text-[clamp(1rem,1.4vw,1.25rem)] leading-[1.6] text-paper/65">
                 {CTA.body}
               </p>
-              <div className="mt-9 flex flex-wrap items-center gap-4">
-                <a href="#demo-form" className="btn-primary">
-                  {CTA.primary.label}
-                </a>
-                <a
-                  href={CTA.secondary.href}
-                  className="text-[14.4px] font-bold text-paper/80 underline-offset-4 hover:text-lime hover:underline"
-                >
-                  {CTA.secondary.label}
-                </a>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={1}>
-            <form
-              id="demo-form"
-              onSubmit={onSubmit}
-              className="rounded-[16px] border border-hairline bg-white/[0.04] p-7"
-            >
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Field
-                  name="name"
-                  label="Name"
-                  autoComplete="given-name"
-                  required
-                />
-                <Field
-                  name="country"
-                  label="Country"
-                  autoComplete="family-name"
-                  required
-                />
-              </div>
-              <div className="mt-4 grid gap-4">
-                <Field
-                  name="email"
-                  label="Work email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                />
-                <Field name="phonenumber" label="Phone number" />
-                <Field
-                  name="company"
-                  label="Company"
-                  autoComplete="organization"
-                  required
-                />
-              </div>
-
-              <label className="mt-4 block">
-                <span className="mb-1.5 block text-[12px] font-semibold text-paper/70">
-                  What are you currently dealing?
-                </span>
-                <textarea
-                  name="message"
-                  rows={3}
-                  maxLength={2000}
-                  className="w-full rounded-[10px] border border-hairline bg-black/30 px-3.5 py-2.5 text-[14px] outline-none transition-colors focus:border-violet"
-                />
-              </label>
-
-              {/* Honeypot — hidden from humans, rejected server-side when filled. */}
-              <input
-                type="text"
-                name="website"
-                tabIndex={-1}
-                autoComplete="off"
-                aria-hidden
-                className="absolute left-[-9999px] h-0 w-0 opacity-0"
-              />
-
-              <button
-                type="submit"
-                disabled={status === "sending"}
-                className="btn-primary mt-6 w-full justify-center disabled:opacity-60"
+              <a>
+                <DemoRequestModal />
+              </a>
+              <a
+                href={CTA.secondary.href}
+                className="text-[14.4px] font-bold text-paper/80 underline-offset-4 hover:text-lime hover:underline"
               >
-                {status === "sending" ? "Sending…" : "Request a Demo"}
-              </button>
-
-              {status !== "idle" && status !== "sending" && (
-                <p
-                  role="status"
-                  className={`mt-4 text-[13px] font-medium ${
-                    status === "ok" ? "text-lime" : "text-red-400"
-                  }`}
-                >
-                  {message}
-                </p>
-              )}
-            </form>
+                {CTA.secondary.label}
+              </a>
+            </div>
           </Reveal>
         </div>
       </div>

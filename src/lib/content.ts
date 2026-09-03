@@ -114,7 +114,10 @@ export const CTA = {
   title: "Turn Your Infrastructure Data Into an Advantage.",
   body: "Let's turn it into an intelligent system for your business. Tell us what you're managing, what information is difficult to track, and where your current systems fall short. We'll help identify where GIS, IoT, AI, and custom software can make the biggest operational difference.",
   primary: { label: "Talk to Our Team", href: "#contact" },
-  secondary: { label: "Explore Our Systems", href: "#explore" },
+  secondary: {
+    label: "Book a meeting",
+    href: "https://calendly.com/valtirensystems/30min",
+  },
 } as const;
 
 export const SOCIALLINKS: SocialLink[] = [
