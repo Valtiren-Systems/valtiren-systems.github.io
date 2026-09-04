@@ -20,12 +20,10 @@ const STEPS: Step[] = [
 ];
 
 const INDUSTRIES = [
-  "Software / SaaS",
-  "Finance",
-  "Healthcare",
-  "Retail / E-commerce",
-  "Education",
-  "Manufacturing",
+  "Water utilities",
+  "Solar operators",
+  "Electric cooperatives",
+  "Construction & infrastructure",
   "Other",
 ] as const;
 
@@ -68,7 +66,11 @@ function Field({ label, children }: FieldProps) {
 const inputClasses =
   "w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition focus:border-[#4F39F6] focus:ring-2 focus:ring-[#4F39F6]/25";
 
+const WEB3FORMS_ACCESS_KEY = "5d85778d-f01d-48e1-9659-afaf96df3b96";
+
 export default function DemoRequestModal() {
+  type Status = "idle" | "sending" | "ok" | "error";
+
   const [open, setOpen] = useState<boolean>(false);
   const [stepIndex, setStepIndex] = useState<number>(0);
   const [form, setForm] = useState<FormState>(initialForm);
@@ -77,7 +79,49 @@ export default function DemoRequestModal() {
   const [industryOpen, setIndustryOpen] = useState<boolean>(false);
   const industryRef = useRef<HTMLDivElement | null>(null);
 
+  const [status, setStatus] = useState<Status>("idle");
+  const [message, setMessage] = useState<string>("");
+
   const step = STEPS[stepIndex];
+
+  async function submitToWeb3Forms(): Promise<void> {
+    setStatus("sending");
+    setMessage("");
+
+    const formData = new FormData();
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("name", form.fullName);
+    formData.append("contact", form.contact);
+    formData.append("industry", form.industry);
+    formData.append("team_setup", form.teamSetup);
+    formData.append("help_needed", form.helpNeeded);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus("ok");
+        setSubmitted(true);
+      } else {
+        setStatus("error");
+        setMessage(
+          (data.message =
+            "Sorry. It was not able to send your message due to a server error.")
+        );
+      }
+    } catch (err) {
+      setStatus("error");
+      setMessage(
+        err instanceof Error
+          ? err.message
+          : "Sorry. It was not able to send your message due to a server error."
+      );
+    }
+  }
 
   useEffect(() => {
     function handlePointerDown(e: MouseEvent) {
@@ -105,9 +149,7 @@ export default function DemoRequestModal() {
 
   const update =
     (field: keyof FormState) =>
-    (
-      e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-    ) =>
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setForm((prev) => ({ ...prev, [field]: e.target.value }));
 
   function validateStep(): boolean {
@@ -130,13 +172,13 @@ export default function DemoRequestModal() {
     return Object.keys(next).length === 0;
   }
 
-  function handleNext(): void {
+  async function handleNext(): Promise<void> {
     if (!validateStep()) return;
     if (stepIndex < STEPS.length - 1) {
       setStepIndex((i) => i + 1);
-    } else {
-      setSubmitted(true);
+      return;
     }
+    await submitToWeb3Forms();
   }
 
   function handleBack(): void {
@@ -151,6 +193,8 @@ export default function DemoRequestModal() {
     setErrors({});
     setSubmitted(false);
     setIndustryOpen(false);
+    setStatus("idle");
+    setMessage("");
   }
 
   return (
@@ -401,7 +445,8 @@ export default function DemoRequestModal() {
                   {stepIndex > 0 ? (
                     <button
                       onClick={handleBack}
-                      className="text-sm font-medium text-slate-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4F39F6]/50 rounded"
+                      disabled={status === "sending"}
+                      className="text-sm font-medium text-slate-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4F39F6]/50 rounded disabled:opacity-50"
                     >
                       Back
                     </button>
@@ -410,20 +455,38 @@ export default function DemoRequestModal() {
                   )}
                   <button
                     onClick={handleNext}
-                    className="flex items-center gap-1.5 rounded-lg bg-[#DAFA0B] px-5 py-2.5 text-sm font-semibold text-[#060810] shadow-sm transition hover:bg-[#B9D409] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DAFA0B]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#12141F]"
+                    disabled={status === "sending"}
+                    className="flex items-center gap-1.5 rounded-lg bg-[#DAFA0B] px-5 py-2.5 text-sm font-semibold text-[#060810] shadow-sm transition hover:bg-[#B9D409] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DAFA0B]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#12141F] disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {stepIndex === STEPS.length - 1 ? "Submit" : "Next"}
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path
-                        d="M5 3L9 7L5 11"
-                        stroke="currentColor"
-                        strokeWidth="1.6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    {status === "sending"
+                      ? "Sending..."
+                      : stepIndex === STEPS.length - 1
+                      ? "Submit"
+                      : "Next"}
+                    {status !== "sending" && (
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M5 3L9 7L5 11"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
                   </button>
                 </div>
+
+                {status === "error" && (
+                  <p className="mt-3 text-right text-xs text-red-400">
+                    {message}
+                  </p>
+                )}
               </>
             ) : (
               <div className="py-6 text-center">

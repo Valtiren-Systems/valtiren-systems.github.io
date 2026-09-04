@@ -1,69 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { CTA } from "@/lib/content";
 import Reveal from "./Reveal";
 import DemoRequestModal from "./DemoRequestModal";
-
-type Status = "idle" | "sending" | "ok" | "error";
 
 /**
  * Reference box: bg #060810, 172.8px block padding, 100px/110px bold display.
  * The form posts to the Postgres-backed /api/leads route.
  */
 export default function CtaSection() {
-  const [status, setStatus] = useState<Status>("idle");
-  const [message, setMessage] = useState("");
-
-  // async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
-  //   const payload = Object.fromEntries(new FormData(form).entries());
-  //   setStatus("sending");
-  //   try {
-  //     const res = await fetch("/api/leads", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(payload),
-  //     });
-  //     const body = await res.json();
-  //     if (!res.ok) throw new Error(body?.error ?? "Something went wrong.");
-  //     setStatus("ok");
-  //     setMessage(
-  //       "Thanks — a strategist will reach out within one business day."
-  //     );
-  //     form.reset();
-  //   } catch (err) {
-  //     setStatus("error");
-  //     setMessage(err instanceof Error ? err.message : "Something went wrong.");
-  //   }
-  // }
-
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const payload = Object.fromEntries(new FormData(form).entries());
-    setStatus("sending");
-    const formData = new FormData(e.currentTarget);
-    formData.append("access_key", "efe3a31f-abff-4e51-9199-da3b500369ff");
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-      const body = await res.json();
-      if (!res.ok) throw new Error(body?.error ?? "Something went wrong.");
-      setStatus("ok");
-      setMessage(
-        "Thanks — our team will review your request and get back to you within one business day."
-      );
-      form.reset();
-    } catch (err) {
-      setStatus("error");
-      setMessage(err instanceof Error ? err.message : "Something went wrong.");
-    }
-  }
-
   return (
     <section id="demo" className="bg-ink-raised py-[clamp(80px,12vw,172.8px)]">
       <div className="shell px-6 md:px-[57.6px]">
