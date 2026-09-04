@@ -64,7 +64,7 @@ function Field({ label, children }: FieldProps) {
 }
 
 const inputClasses =
-  "w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition focus:border-[#4F39F6] focus:ring-2 focus:ring-[#4F39F6]/25";
+  "w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition focus:border-[#4F39F6] focus:ring-2 focus:ring-[#4F39F6]/25 shadow-[0_0_80px_rgba(88,65,255,0.35)]";
 
 const WEB3FORMS_ACCESS_KEY = "5d85778d-f01d-48e1-9659-afaf96df3b96";
 
