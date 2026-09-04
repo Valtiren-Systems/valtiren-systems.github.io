@@ -54,7 +54,9 @@ export default function Nav() {
 
         <div className="flex items-center gap-4">
           <a
-            href="#contact"
+            href="https://mail.google.com/mail/?view=cm&to=valtirensystems@gmail.com&su=Hello%20Valtiren%20Systems%21"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden text-[14px] font-medium text-paper/80 hover:text-lime md:block"
           >
             Support

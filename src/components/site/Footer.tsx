@@ -40,7 +40,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-black pb-8 pt-[86.4px]">
+    <footer id="footer" className="bg-black pb-8 pt-[86.4px]">
       <div className="shell px-6 md:px-[57.6px]">
         <div className="grid gap-[48px] lg:grid-cols-[352.8px_repeat(3,252px)] lg:gap-[72px]">
           <div>
@@ -70,8 +70,8 @@ export default function Footer() {
                   <a
                     key={name}
                     href={href}
-                    target={name === "Email" ? undefined : "_blank"}
-                    rel={name === "Email" ? undefined : "noopener noreferrer"}
+                    target={"_blank"}
+                    rel={"noopener noreferrer"}
                     aria-label={name}
                     className="social-links__item"
                     style={{
@@ -103,10 +103,11 @@ export default function Footer() {
                 {col.heading}
               </h3>
               <ul className="mt-4 space-y-2.5">
-                {col.links.map((link) => (
+                {col.links.map((link, idx) => (
                   <li key={link}>
                     <a
-                      href="#"
+                      target="_blank"
+                      href={col.href[idx] || "#"}
                       className="text-[13px] text-paper/50 transition-colors hover:text-lime"
                     >
                       {link}

@@ -39,7 +39,7 @@ export const NAV_LINKS = [
   // { label: "Industries", href: "#industries" },
   { label: "Services", href: "#services" },
   { label: "Resources", href: "#resources" },
-  { label: "Company", href: "#company" },
+  { label: "Contact", href: "#footer" },
 ] as const;
 
 export const HERO = {
@@ -114,50 +114,12 @@ export const CTA = {
 export const SOCIALLINKS: SocialLink[] = [
   {
     name: "Email",
-    href: "mailto:valtirensystems@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&to=valtirensystems@gmail.com&su=Hello%20Valtiren%20Systems%21",
     color: "#EA4335",
     stroke: true,
     shapes: [
       { type: "rect", x: 2, y: 4, width: 20, height: 16, rx: 2 },
       { type: "path", d: "M22 6l-10 7L2 6" },
-    ],
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/company/valtiren-systems/",
-    color: "#0A66C2",
-    stroke: false,
-    shapes: [
-      {
-        type: "path",
-        d: "M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z",
-      },
-    ],
-  },
-  {
-    name: "GitHub",
-    href: "https://github.com/Valtiren-Systems",
-    color: "#181717",
-    stroke: false,
-    shapes: [
-      {
-        type: "path",
-        d: "M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0 0 22 12c0-5.52-4.48-10-10-10z",
-      },
-    ],
-  },
-  {
-    name: "Website",
-    href: "https://valtiren-systems.com/",
-    color: "#4A90D9",
-    stroke: true,
-    shapes: [
-      { type: "circle", cx: 12, cy: 12, r: 10 },
-      { type: "line", x1: 2, y1: 12, x2: 22, y2: 12 },
-      {
-        type: "path",
-        d: "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z",
-      },
     ],
   },
   {
@@ -189,6 +151,45 @@ export const SOCIALLINKS: SocialLink[] = [
     ],
   },
   {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/valtiren-systems/",
+    color: "#0A66C2",
+    stroke: false,
+    shapes: [
+      {
+        type: "path",
+        d: "M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z",
+      },
+    ],
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/Valtiren-Systems",
+    color: "#181717",
+    stroke: false,
+    shapes: [
+      {
+        type: "path",
+        d: "M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0 0 22 12c0-5.52-4.48-10-10-10z",
+      },
+    ],
+  },
+  // {
+  //   name: "Website",
+  //   href: "https://valtiren-systems.com/",
+  //   color: "#4A90D9",
+  //   stroke: true,
+  //   shapes: [
+  //     { type: "circle", cx: 12, cy: 12, r: 10 },
+  //     { type: "line", x1: 2, y1: 12, x2: 22, y2: 12 },
+  //     {
+  //       type: "path",
+  //       d: "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z",
+  //     },
+  //   ],
+  // },
+
+  {
     name: "Community",
     href: "https://github.com/orgs/Valtiren-Systems/discussions",
     color: "#8250DF",
@@ -212,13 +213,34 @@ export const FOOTER_COLUMNS = [
       "Site Inventory Tracker",
       "Vegetation Risk Overlay",
     ],
+    href: [
+      "#solutions",
+      "#solutions",
+      "#solutions",
+      "#solutions",
+      "#solutions",
+    ],
   },
   {
     heading: "Company",
     links: ["About", "Careers", "Newsroom", "Partners", "Contact"],
+    href: [
+      "#services",
+      "#services",
+      "#services",
+      "https://topmapsolutions.com/",
+      "#demo",
+    ],
   },
   {
     heading: "Resources",
     links: ["Blog", "Case Studies", "Guides", "Webinars", "Support"],
+    href: [
+      "https://github.com/orgs/Valtiren-Systems/discussions",
+      "#resources",
+      "#resources",
+      "#resources",
+      "#resources",
+    ],
   },
 ] as const;
