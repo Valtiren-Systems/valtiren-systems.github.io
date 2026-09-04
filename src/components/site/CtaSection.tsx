@@ -32,7 +32,7 @@ export default function CtaSection() {
               <a>
                 <BookMeetingButton
                   url="https://calendly.com/valtirensystems/30min"
-                  className="text-[14.4px] font-bold text-paper/80 underline-offset-4 hover:text-lime hover:underline calendly-popup calendly-popup-content"
+                  className="text-[14.4px] font-bold text-paper/80 underline-offset-4 hover:text-lime hover:underline"
                 />
               </a>
             </div>

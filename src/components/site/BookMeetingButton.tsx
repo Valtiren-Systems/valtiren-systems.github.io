@@ -40,7 +40,8 @@ export default function BookMeetingButton({
       embed_domain:
         typeof window !== "undefined" ? window.location.hostname : "",
       embed_type: "Inline",
-      background_color: "12141f",
+      background_color: "222529",
+      // background_color: "12141f",
       text_color: "f8fafc",
       primary_color: "4f39f6",
       hide_gdpr_banner: "1",
