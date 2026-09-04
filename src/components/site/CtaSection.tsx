@@ -3,6 +3,7 @@
 import { CTA } from "@/lib/content";
 import Reveal from "./Reveal";
 import DemoRequestModal from "./DemoRequestModal";
+import BookMeetingButton from "./BookMeetingButton";
 
 /**
  * Reference box: bg #060810, 172.8px block padding, 100px/110px bold display.
@@ -28,11 +29,11 @@ export default function CtaSection() {
               <a>
                 <DemoRequestModal />
               </a>
-              <a
-                href={CTA.secondary.href}
-                className="text-[14.4px] font-bold text-paper/80 underline-offset-4 hover:text-lime hover:underline"
-              >
-                {CTA.secondary.label}
+              <a>
+                <BookMeetingButton
+                  url="https://calendly.com/valtirensystems/30min"
+                  className="text-[14.4px] font-bold text-paper/80 underline-offset-4 hover:text-lime hover:underline calendly-popup calendly-popup-content"
+                />
               </a>
             </div>
           </Reveal>
