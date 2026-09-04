@@ -9,72 +9,51 @@ const s = {
 };
 
 const PATHS: Record<IconName, React.ReactNode> = {
-  signage: (
+  assetMap: (
     <>
-      <rect x="3" y="4" width="18" height="12" rx="2" {...s} />
-      <path d="M12 16v4M8 20h8" {...s} />
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" {...s} />
+      <rect x="9" y="4.6" width="6" height="6" rx="1.4" {...s} />
+      <circle cx="12" cy="6.6" r="0.65" fill="currentColor" />
     </>
   ),
-  menu: (
+  fieldAnalytics: (
     <>
-      <rect x="3" y="4" width="18" height="16" rx="2" {...s} />
-      <path d="M7 9h10M7 13h6" {...s} />
+      <path d="M4 19h16" {...s} />
+      <path d="M4.5 19v-5M9.5 19v-8M14.5 19v-11M19.5 19v-14" {...s} />
+      <path d="M4.5 12.5 9.5 9.8 14.5 7 19.5 4.2" {...s} />
+      <path d="M16.2 4.2h3.3v3.3" {...s} />
     </>
   ),
-  kiosk: (
+  systemsOps: (
     <>
-      <rect x="6" y="2" width="12" height="18" rx="2" {...s} />
-      <path d="M10 20h4M9 16h6" {...s} />
-      <circle cx="12" cy="9" r="2.4" {...s} />
-    </>
-  ),
-  music: (
-    <>
-      <path d="M9 18V6l10-2v12" {...s} />
-      <circle cx="7" cy="18" r="2" {...s} />
-      <circle cx="17" cy="16" r="2" {...s} />
-    </>
-  ),
-  hold: (
-    <>
-      <path
-        d="M5 4h3l2 5-2.2 1.4a12 12 0 0 0 5.8 5.8L15 14l5 2v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 6.2 2 2 0 0 1 5 4Z"
-        {...s}
-      />
-    </>
-  ),
-  scent: (
-    <>
-      <path
-        d="M8 21h8a2 2 0 0 0 2-2v-6a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4v6a2 2 0 0 0 2 2Z"
-        {...s}
-      />
-      <path d="M10 5h4M12 5V3M9 14c1.5-1.5 4.5-1.5 6 0" {...s} />
-    </>
-  ),
-  driveThru: (
-    <>
-      <path
-        d="M3 16h18M5 16l1.6-5.2A2 2 0 0 1 8.5 9.4h7a2 2 0 0 1 1.9 1.4L19 16"
-        {...s}
-      />
-      <circle cx="7.5" cy="18.5" r="1.6" {...s} />
-      <circle cx="16.5" cy="18.5" r="1.6" {...s} />
-      <path d="M12 3v3" {...s} />
-    </>
-  ),
-  wifi: (
-    <>
-      <path
-        d="M2.5 9a15 15 0 0 1 19 0M5.5 12.5a10.5 10.5 0 0 1 13 0M8.5 16a6 6 0 0 1 7 0"
-        {...s}
-      />
-      <circle cx="12" cy="19.5" r="1.2" fill="currentColor" />
-    </>
-  ),
-  analytics: (
-    <>
-      <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" {...s} />
+      <circle cx="9" cy="9.6" r="3.3" {...s} />
+      <circle cx="9" cy="9.6" r="1" {...s} />
+      {[0, 60, 120, 180, 240, 300].map((a) => (
+        <rect
+          key={`big-${a}`}
+          x="7.9"
+          y="4.1"
+          width="2.2"
+          height="2.2"
+          rx="0.6"
+          fill="currentColor"
+          transform={`rotate(${a} 9 9.6)`}
+        />
+      ))}
+      <circle cx="16.3" cy="15.9" r="2.3" {...s} />
+      <circle cx="16.3" cy="15.9" r="0.7" {...s} />
+      {[0, 60, 120, 180, 240, 300].map((a) => (
+        <rect
+          key={`small-${a}`}
+          x="15.55"
+          y="12.1"
+          width="1.5"
+          height="1.5"
+          rx="0.4"
+          fill="currentColor"
+          transform={`rotate(${a} 16.3 15.9)`}
+        />
+      ))}
     </>
   ),
 };
@@ -85,7 +64,7 @@ export function SolutionIcon({ name }: { name: IconName }) {
       aria-hidden
       className="grid h-[60px] w-[60px] shrink-0 place-items-center rounded-[14px] bg-violet text-white shadow-[0_10px_24px_-10px_rgba(103,30,255,0.9)]"
     >
-      <svg viewBox="0 0 24 24" className="h-[26px] w-[26px]">
+      <svg viewBox="0 0 24 24" className="h-[36px] w-[36px]">
         {PATHS[name]}
       </svg>
     </span>

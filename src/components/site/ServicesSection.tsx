@@ -14,7 +14,7 @@ export default function ServicesSection() {
       <div className="shell px-6 md:px-[57.6px]">
         <div className="grid gap-[72px] lg:grid-cols-[526px_minmax(0,726px)]">
           <Reveal>
-            <h2 className="text-[clamp(2.25rem,4.6vw,4.167rem)] font-bold leading-[1.1] tracking-[-0.03em] text-violet">
+            <h2 className="mt-20 text-[clamp(2.25rem,4.6vw,4.167rem)] font-bold leading-[1.1] tracking-[-0.03em] text-violet">
               {SERVICES.heading}
             </h2>
           </Reveal>
@@ -26,7 +26,7 @@ export default function ServicesSection() {
               </p>
             </Reveal>
 
-            <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+            <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-1">
               {SERVICES.items.map((item, i) => (
                 <Reveal key={item.title} delay={((i % 2) + 1) as 1 | 2}>
                   <div className="border-t border-midnight/12 pt-5">

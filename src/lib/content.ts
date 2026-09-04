@@ -4,16 +4,7 @@
  * a 2-column services block, a logo strip, and a closing CTA.
  */
 
-export type IconName =
-  | "signage"
-  | "kiosk"
-  | "music"
-  | "hold"
-  | "scent"
-  | "driveThru"
-  | "wifi"
-  | "menu"
-  | "analytics";
+export type IconName = "assetMap" | "fieldAnalytics" | "systemsOps";
 
 export type Solution = {
   icon: IconName;
@@ -65,22 +56,22 @@ export const SUITE = {
 
 export const SOLUTIONS: Solution[] = [
   {
-    icon: "signage",
+    icon: "assetMap",
     title: "Know Where Your Infrastructure Is",
     body: "Your assets are spread across maps, spreadsheets, databases, work orders, and field crews. We bring them together into a single spatial view so your team can understand what exists, where it is, and what needs attention.",
-    href: "#digital-signage",
+    href: "#interactive-assetMap",
   },
   {
-    icon: "menu",
+    icon: "fieldAnalytics",
     title: "Turn Field Data Into Decisions",
     body: "Sensors, inspections, GPS devices, meters, and field reports generate valuable data — but collecting data is only the beginning. We connect your field data and uses AI-powered analysis to surface anomalies, prioritize issues, and help your team focus on what matters.",
-    href: "#digital-menu-boards",
+    href: "#interactive-fieldAnalytics",
   },
   {
-    icon: "kiosk",
+    icon: "systemsOps",
     title: "Build Systems Around Your Operations",
     body: "Every infrastructure business works differently. Instead of forcing your operation into a generic SaaS workflow, we build focused systems around your processes — from asset management and field operations to monitoring, reporting, and intelligent automation.",
-    href: "#interactive-kiosks",
+    href: "#interactive-systemsOps",
   },
 ];
 
