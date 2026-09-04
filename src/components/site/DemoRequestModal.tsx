@@ -197,6 +197,49 @@ export default function DemoRequestModal() {
     setMessage("");
   }
 
+  // Keyboard shortcuts while the modal is open:
+  // Enter -> next step, Backspace -> previous step, Escape -> close modal.
+  useEffect(() => {
+    if (!open) return;
+
+    function handleModalKeyDown(e: KeyboardEvent) {
+      const tag = (e.target as HTMLElement | null)?.tagName;
+
+      if (e.key === "Escape") {
+        // If the industry dropdown is open, let its own Escape handler
+        // close that first instead of closing the whole modal.
+        if (industryOpen) return;
+        e.preventDefault();
+        closeAndReset();
+        return;
+      }
+
+      if (submitted) return; // no steps to move through on the thank-you screen
+
+      if (e.key === "Enter") {
+        // Don't hijack Enter in a textarea (needs to insert newlines) or on
+        // a button (native click behavior already handles it).
+        if (tag === "TEXTAREA" || tag === "BUTTON") return;
+        if (status === "sending") return;
+        e.preventDefault();
+        void handleNext();
+        return;
+      }
+
+      if (e.key === "Backspace") {
+        // Don't hijack Backspace while someone is editing text.
+        if (tag === "INPUT" || tag === "TEXTAREA") return;
+        if (stepIndex > 0) {
+          e.preventDefault();
+          handleBack();
+        }
+      }
+    }
+
+    document.addEventListener("keydown", handleModalKeyDown);
+    return () => document.removeEventListener("keydown", handleModalKeyDown);
+  }, [open, submitted, industryOpen, stepIndex, form, status]);
+
   return (
     <div className="flex items-center justify-center bg-[#060810] p-8">
       <button
