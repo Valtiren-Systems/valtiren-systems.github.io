@@ -127,7 +127,7 @@ export default function Footer() {
             {["Privacy", "Terms", "Accessibility"].map((l) => (
               <a
                 key={l}
-                href="#"
+                href={"/" + l.toLowerCase()}
                 className="text-[12px] text-paper/40 hover:text-lime"
               >
                 {l}
