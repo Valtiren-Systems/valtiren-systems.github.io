@@ -35,11 +35,11 @@ export interface SocialLink {
 }
 
 export const NAV_LINKS = [
-  { label: "Solutions", href: "#solutions" },
-  // { label: "Industries", href: "#industries" },
-  { label: "Services", href: "#services" },
-  { label: "Resources", href: "#resources" },
-  { label: "Contact", href: "#footer" },
+  { label: "Solutions", href: "/#solutions" },
+  // { label: "Industries", href: "/#industries" },
+  { label: "Services", href: "/#services" },
+  { label: "Resources", href: "/#resources" },
+  { label: "Contact", href: "/#footer" },
 ] as const;
 
 export const HERO = {
@@ -214,22 +214,22 @@ export const FOOTER_COLUMNS = [
       "Vegetation Risk Overlay",
     ],
     href: [
-      "#solutions",
-      "#solutions",
-      "#solutions",
-      "#solutions",
-      "#solutions",
+      NAV_LINKS[0].href,
+      NAV_LINKS[0].href,
+      NAV_LINKS[0].href,
+      NAV_LINKS[0].href,
+      NAV_LINKS[0].href,
     ],
   },
   {
     heading: "Company",
     links: ["About", "Careers", "Newsroom", "Partners", "Contact"],
     href: [
-      "#services",
-      "#services",
-      "#services",
+      NAV_LINKS[1].href,
+      NAV_LINKS[1].href,
+      NAV_LINKS[1].href,
       "https://topmapsolutions.com/",
-      "#demo",
+      "/#demo",
     ],
   },
   {
@@ -237,10 +237,10 @@ export const FOOTER_COLUMNS = [
     links: ["Blog", "Case Studies", "Guides", "Webinars", "Support"],
     href: [
       "https://github.com/orgs/Valtiren-Systems/discussions",
-      "#resources",
-      "#resources",
-      "#resources",
-      "#resources",
+      NAV_LINKS[2].href,
+      NAV_LINKS[2].href,
+      NAV_LINKS[2].href,
+      NAV_LINKS[2].href,
     ],
   },
 ] as const;
