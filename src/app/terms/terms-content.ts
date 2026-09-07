@@ -4,7 +4,7 @@ export interface TermsSection {
   body: string[];
 }
 
-export const TERMS_LAST_UPDATED = "September 7, 2026";
+export const TERMS_LAST_UPDATED = "August 21, 2026";
 
 export const TERMS_INTRO =
   "These terms govern your use of valtirensystems.com and our operational intelligence platform. By using our site or services, you agree to the terms below.";
