@@ -54,11 +54,11 @@ export default function Footer() {
               />
             </div>
             <p className="mt-5 max-w-[320px] text-[13px] leading-[21px] text-paper/50">
-              Valtiren Systems connects operational data, location data, and
-              field systems into one intelligent layer. See what's happening
-              across your infrastructure, identify problems earlier, and help
-              your team make better decisions — without replacing the systems
-              you already rely on.
+              Valtiren Systems connects grid data, GIS, field systems, sensors,
+              and operational data into an intelligent layer. Use AI and
+              analytics to understand your grid, identify risks earlier, and
+              help your team make better decisions — without replacing the
+              systems you already rely on.
             </p>
 
             <div className="social-links">
