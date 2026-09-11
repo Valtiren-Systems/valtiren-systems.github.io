@@ -46,64 +46,64 @@ export const HERO = {
   eyebrow: "Meet the",
   title: "Valtiren Systems",
   subtitle:
-    "AI-powered systems connecting infrastructure, data, and the field.",
+    "Connects GIS, field data, sensors, and operational systems, then uses AI to help electric utilities understand their grid, identify risks, and act faster.",
 } as const;
 
 export const SUITE = {
-  title: "Connect What You Already Have.",
-  body: "Your business already has data, devices, maps, databases, and field workflows. We connects them into a unified operational layer, then uses AI to help your team find patterns, detect problems, and make better decisions — without replacing everything you already use.",
+  title: "Connect What You Already Have. Make It Intelligent.",
+  body: "Electric utilities already have GIS maps, asset databases, meters, sensors, field records, work orders, and operational systems. The problem is that the information often lives across different systems. We connect the data you already have into a unified operational layer, then use AI and analytics to find patterns, surface anomalies, identify risks, and support better decisions without replacing everything you already use.",
 } as const;
 
 export const SOLUTIONS: Solution[] = [
   {
     icon: "assetMap",
-    title: "Know Where Your Infrastructure Is",
-    body: "Your assets are spread across maps, spreadsheets, databases, work orders, and field crews. We bring them together into a single spatial view so your team can understand what exists, where it is, and what needs attention.",
+    title: "Build an Intelligent View of Your Grid",
+    body: "Grid assets, GIS records, network data, and field updates can be scattered across different systems. We connect them into a spatial operational view and use AI-assisted analysis to help your team understand assets, relationships, and emerging risks.",
     href: "#interactive-assetMap",
   },
   {
     icon: "fieldAnalytics",
-    title: "Turn Field Data Into Decisions",
-    body: "Sensors, inspections, GPS devices, meters, and field reports generate valuable data — but collecting data is only the beginning. We connect your field data and uses AI-powered analysis to surface anomalies, prioritize issues, and help your team focus on what matters.",
+    title: "Turn Grid Data Into AI-Powered Insights",
+    body: "Inspections, sensors, meters, GPS devices, vegetation records, outage information, and field reports generate valuable data. We connect and analyze that information to detect anomalies, identify potential risks, prioritize issues, and help teams decide what needs attention.",
     href: "#interactive-fieldAnalytics",
   },
   {
     icon: "systemsOps",
-    title: "Build Systems Around Your Operations",
-    body: "Every infrastructure business works differently. Instead of forcing your operation into a generic SaaS workflow, we build focused systems around your processes — from asset management and field operations to monitoring, reporting, and intelligent automation.",
+    title: "Build AI Around Your Utility Workflows",
+    body: "Utilities already rely on GIS, databases, meters, sensors, and operational systems. We build focused software that connects those systems and applies AI where it can reduce manual work, accelerate analysis, and improve operational decision-making.",
     href: "#interactive-systemsOps",
   },
 ];
 
 export const SERVICES = {
-  heading: "From Field Data to Intelligent Systems",
-  body: "",
+  heading: "From Grid Data to AI-Powered Operations",
+  body: "We connect the information your utility already has, make it understandable, and apply AI where it can help your teams work faster and make better decisions.",
   items: [
     {
       title: "01 — Connect",
-      body: "We connect your existing GIS, IoT devices, databases, business systems, and field workflows into one operational layer.",
+      body: "Connect GIS, asset databases, sensors, meters, field systems, and operational data into a more consistent view of your grid.",
     },
     {
       title: "02 — Understand",
-      body: "We turn fragmented infrastructure data into maps, dashboards, alerts, analytics, and AI-powered operational intelligence.",
+      body: "Use spatial analytics, data processing, and AI to detect patterns, surface anomalies, identify risks, and turn fragmented grid data into actionable intelligence.",
     },
     {
       title: "03 — Operate",
-      body: "Your team gets software designed around the way your organization actually works — helping people monitor, maintain, and improve physical infrastructure with better information and intelligent automation.",
+      body: "Put those insights into focused software and workflows that help utility teams prioritize work, manage assets, monitor risks, and make faster operational decisions.",
     },
   ],
 } as const;
 
 export const LOGOS = [
-  "Water utilities",
-  "Solar operators",
-  "Electric cooperatives",
-  "Construction & infrastructure",
+  "Electric Utilities",
+  "Electric Cooperatives",
+  "Grid Operators",
+  "Energy & Infrastructure",
 ] as const;
 
 export const CTA = {
-  title: "Turn Your Infrastructure Data Into an Advantage.",
-  body: "Let's turn it into an intelligent system for your business. Tell us what you're managing, what information is difficult to track, and where your current systems fall short. We'll help identify where GIS, IoT, AI, and custom software can make the biggest operational difference.",
+  title: "Make Your Grid Data Work Smarter.",
+  body: "Tell us what your team is managing, where your grid data lives, and which workflows take more manual effort than they should. We'll help identify where GIS, data integration, IoT, AI, and custom software can turn fragmented utility data into practical operational intelligence.",
   primary: { label: "Talk to Our Team", href: "#contact" },
   secondary: {
     label: "Book a meeting",
@@ -207,11 +207,10 @@ export const FOOTER_COLUMNS = [
   {
     heading: "Solutions",
     links: [
-      "Revenue Leak Engine",
-      "LSL Compliance Intelligence",
-      "Solar Fault Detector",
-      "Site Inventory Tracker",
-      "Vegetation Risk Overlay",
+      "AI Grid Intelligence",
+      "Grid Asset Intelligence",
+      "DER & Hosting Capacity",
+      "Field Data Intelligence",
     ],
     href: [
       NAV_LINKS[0].href,
