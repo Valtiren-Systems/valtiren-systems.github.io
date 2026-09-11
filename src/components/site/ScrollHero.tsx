@@ -164,7 +164,7 @@ export default function ScrollHero() {
       ref={trackRef}
       className="
         relative
-        h-[210vh]
+        h-[320vh]
         bg-[#02030a]
       "
     >
@@ -385,7 +385,10 @@ export default function ScrollHero() {
           style={{
             opacity: "calc(1 - var(--p) * 2.5)",
 
-            transform: "translateY(calc(var(--p) * -70px))",
+            transform: `
+              translateY(calc(var(--p) * -70px))
+              scale(calc(1 - var(--p) * 0.35))
+            `,
           }}
         >
           <div className="max-w-[1000px]">
