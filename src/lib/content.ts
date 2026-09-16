@@ -113,6 +113,30 @@ export const CTA = {
 
 export const SOCIALLINKS: SocialLink[] = [
   {
+    name: "X",
+    href: "https://x.com/valtirensystems",
+    color: "#FFFFFF",
+    stroke: false,
+    shapes: [
+      {
+        type: "path",
+        d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z",
+      },
+    ],
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/valtiren-systems/",
+    color: "#0A66C2",
+    stroke: false,
+    shapes: [
+      {
+        type: "path",
+        d: "M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z",
+      },
+    ],
+  },
+  {
     name: "Email",
     href: "https://mail.google.com/mail/?view=cm&to=valtirensystems@gmail.com&su=Hello%20Valtiren%20Systems%21",
     color: "#EA4335",
@@ -147,18 +171,6 @@ export const SOCIALLINKS: SocialLink[] = [
         type: "path",
         fill: "#E01E5A",
         d: "M15.06 18.96a2.11 2.11 0 1 1-4.22 0v-2.11h2.11a2.11 2.11 0 0 1 2.11 2.11zm-5.29 1.06A2.11 2.11 0 0 1 7.76 18a2.11 2.11 0 0 1 2.11-2.11h5.39A2.11 2.11 0 0 1 17.27 18a2.11 2.11 0 0 1-2.11 2.11H9.77z",
-      },
-    ],
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/company/valtiren-systems/",
-    color: "#0A66C2",
-    stroke: false,
-    shapes: [
-      {
-        type: "path",
-        d: "M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z",
       },
     ],
   },
